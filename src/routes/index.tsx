@@ -17,7 +17,7 @@ export default component$(() => {
         </p>
         <br/>
         <p>
-          <button><a href='/joke'>See joke</a></button>
+          <button><a href='joke'>See joke</a></button>
         </p>
       </div>
     </main>
