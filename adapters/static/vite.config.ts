@@ -6,14 +6,13 @@ export default extendConfig(baseConfig, () => {
   return {
     build: {
       ssr: true,
-      outDir: '/docs',
       rollupOptions: {
         input: ["@qwik-city-plan"],
       },
     },
     plugins: [
       staticAdapter({
-        origin: "https://github.com/davidde/qwik-jokes-tutorial",
+        origin: "https://davidde.github.io/qwik-jokes-tutorial",
       }),
     ],
   };

@@ -69,3 +69,6 @@ npm run build # or `yarn build`
 ```shell
 npm run build.server
 ```
+* Update `staticAdapter({origin: )` in `adapters/static/vite.config.ts` to the Github URL.
+* Update `qwikVite({client:outDir: )` in main `vite.config.ts` to `docs` for Github pages.
+* Update the deploy folder in your Github account under `Settings > Pages > Build and deployment > Branch > folder` also to `/docs`.
