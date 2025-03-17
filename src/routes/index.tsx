@@ -1,16 +1,26 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import styles from "./index.css?inline";
+
 
 export default component$(() => {
+  useStylesScoped$(styles);
+
   return (
-    <>
-      <h1>Hi 👋</h1>
+    <main>
       <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
+        <h1>Hi 👋</h1>
+        <p>
+          Can't wait to see what you build with qwik!
+          <br/>
+          Happy coding.
+        </p>
+        <br/>
+        <p>
+          <button><a href='/joke'>See joke</a></button>
+        </p>
       </div>
-    </>
+    </main>
   );
 });
 
