@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Build Qwik app
-        run: npm run build.full
+        run: npm run build.server
 
       - name: Upload build output as an artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
