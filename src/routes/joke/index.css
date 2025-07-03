@@ -1,7 +1,31 @@
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (width >= 800px) {
+  main > div {
+    width: 30vw;
+  }
+}
+
 p {
   font-weight: bold;
 }
 
-form {
+.vote-button {
   float: right;
+  margin-left: 1rem;
 }
+
+.joke {
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
