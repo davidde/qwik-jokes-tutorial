@@ -83,7 +83,18 @@ npm run build.server
 * Use `npm run build.server` for the build step in the `.github/workflows/main.yml` Github Action workflow:
   ```yml
   - name: Build Qwik app
-    run: npm run build.server
+    run: npm run build.full
+  ```
+  The `scripts` section of `package.json` should contain:
+  ```json
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.full": "npm run build && npm run build.server",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.server": "vite build -c adapters/static/vite.config.ts",
+  ...
+  }
   ```
 * Make sure to upload `dist/qwik-jokes-tutorial` in the upload step of the `.github/workflows/main.yml` Github Action workflow:
   ```yml
