@@ -8,6 +8,7 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import pkg from "./package.json";
 
+
 type PkgDep = Record<string, string>;
 const { dependencies = {}, devDependencies = {} } = pkg as any as {
   dependencies: PkgDep;
@@ -21,11 +22,12 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
+    base: '/qwik-jokes-tutorial/',
     plugins: [
       qwikCity(),
       qwikVite({
         client: {
-          outDir: 'docs/',
+          outDir: 'dist/',
         },
       }),
       tsconfigPaths()
