@@ -25,7 +25,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
       qwikCity(),
       qwikVite({
         client: {
-          outDir: 'dist/',
+          outDir: 'docs/',
         },
       }),
       tsconfigPaths()

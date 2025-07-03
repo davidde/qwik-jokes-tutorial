@@ -5,7 +5,7 @@ import baseConfig from "../../vite.config";
 export default extendConfig(baseConfig, () => {
   return {
     build: {
-      outDir: 'dist/',
+      outDir: 'docs/',
     },
     plugins: [
       staticAdapter({

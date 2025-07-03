@@ -1,5 +1,5 @@
 {
-  "manifestHash": "q2o95w",
+  "manifestHash": "xs1z44",
   "symbols": {
     "s_D31VY5MSTXo": {
       "origin": "routes/joke/index.tsx",
@@ -211,20 +211,6 @@
         197
       ]
     },
-    "s_R0l7DZy2OFU": {
-      "origin": "routes/joke/index.tsx",
-      "displayName": "index.tsx_joke_component_main_div_button_onClick",
-      "canonicalFilename": "index.tsx_joke_component_main_div_button_onClick_R0l7DZy2OFU",
-      "hash": "R0l7DZy2OFU",
-      "ctxKind": "eventHandler",
-      "ctxName": "onClick$",
-      "captures": true,
-      "parent": "s_cgQBIg9xNbA",
-      "loc": [
-        1961,
-        2017
-      ]
-    },
     "s_jhJPx4UbTCU": {
       "origin": "routes/index.tsx",
       "displayName": "index.tsx_routes_component_useStylesScoped",
@@ -365,6 +351,20 @@
         28391
       ]
     },
+    "s_R0l7DZy2OFU": {
+      "origin": "routes/joke/index.tsx",
+      "displayName": "index.tsx_joke_component_main_div_button_onClick",
+      "canonicalFilename": "index.tsx_joke_component_main_div_button_onClick_R0l7DZy2OFU",
+      "hash": "R0l7DZy2OFU",
+      "ctxKind": "eventHandler",
+      "ctxName": "onClick$",
+      "captures": true,
+      "parent": "s_cgQBIg9xNbA",
+      "loc": [
+        1961,
+        2017
+      ]
+    },
     "s_b6Klpvqij4A": {
       "origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
       "displayName": "index.qwik.mjs_QwikCityMockProvider_component_goto",
@@ -424,7 +424,6 @@
     "s_iizhW6hg00Y": "q-CV6LWjwA.js",
     "s_7xnfLzvF3GQ": "q-Bl6cH8S0.js",
     "s_4ELugjhPy40": "q-DpLMhLqq.js",
-    "s_R0l7DZy2OFU": "q-SC6y6k5h.js",
     "s_jhJPx4UbTCU": "q-BGoEbGT_.js",
     "s_0QlEo9uQWSg": "q-DvzbgVBc.js",
     "s_EmqstnKuSPI": "q-DKilVTaQ.js",
@@ -435,6 +434,7 @@
     "s_KmkhzbQTeJ8": "q-B6HqXEB0.js",
     "s_O9qA9Fc0LBs": "q-DjmyC6ei.js",
     "s_OrFExelfyKw": "q-BGF8ZmiF.js",
+    "s_R0l7DZy2OFU": "q-SC6y6k5h.js",
     "s_b6Klpvqij4A": "q-BvHI7Hw6.js",
     "s_jSr4jgtnAzs": "q-CHW8qwLd.js",
     "s_rnjxNi0k3qg": "q-D328X6qr.js"
