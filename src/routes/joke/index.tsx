@@ -4,26 +4,12 @@ import styles from "./index.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
-  const isFavoriteSignal = useSignal(false);
 
-  // Replace server loader with client-side joke state:
+  const isFavoriteSignal = useSignal(false);
   const dadJokeSignal = useSignal<{ id: string; joke: string }>({ id: '', joke: '' });
 
-  // Fetch joke client-side on component mount:
-  useTask$(async () => {
-    // track something if needed, or just run once
-    if (!dadJokeSignal.value.joke) {
-      const res = await fetch('https://icanhazdadjoke.com/', {
-        headers: { Accept: 'application/json' },
-      });
-      const data = await res.json();
-      dadJokeSignal.value = { id: data.id, joke: data.joke };
-    }
-  });
-
-  // Fetch a new joke when upvote/downvote form submits
-  // Since the form does a full submit by default, let's disable that and do fetch ourselves instead
-  // For now keep the form but disable default submit behavior and fetch new joke client-side instead
+  // Fetch a new joke client-side:
+  // (Wrapped in `$()` so Qwik can serialize this function for event handlers)
   const fetchNewJoke = $(async () => {
     const res = await fetch('https://icanhazdadjoke.com/', {
       headers: { Accept: 'application/json' },
@@ -34,6 +20,9 @@ export default component$(() => {
     // Reset favorite when new joke loads
     isFavoriteSignal.value = false;
   });
+
+  // Fetch joke client-side on component mount:
+  useTask$(() => fetchNewJoke());
 
   return (
     <main>

@@ -63,6 +63,8 @@ npm run build # or `yarn build`
 ```shell
 npm run build.server
 ```
+
+# Setting up this project for Github Pages
 * Update `staticAdapter({origin: )` in `adapters/static/vite.config.ts` to the **full Github URL**:
   ```ts
   plugins: [
@@ -103,6 +105,4 @@ npm run build.server
     with:
       path: ./dist/qwik-jokes-tutorial
   ```
-* 
-
-
+* The original joke fetches from `https://icanhazdadjoke.com` at runtime will have to be updated to use client-side fetching. Fetching cannot be done in `routeLoader$()` like in the original tutorial, because it runs on the server!
