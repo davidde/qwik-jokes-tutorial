@@ -65,6 +65,20 @@ npm run build.server
 ```
 
 # Setting up this project for Github Pages
+## Add the static site adapter
+  ```bash
+  npm run qwik add static
+  ```
+* Running the above command will make the following changes to your project:
+  - A `build.server` script will be automatically added to your `package.json` file.
+  - An `adapters/static/vite.config.ts` file will be created for the static site specific config.
+* To build the static site:
+  ```bash
+  npm run build.server
+  ```
+  Your build files will be generated into the `dist` folder by default.
+
+## Configure the static site adapter for Github Pages
 * Update `staticAdapter({origin: )` in `adapters/static/vite.config.ts` to the **full Github URL**:
   ```ts
   plugins: [
@@ -73,7 +87,7 @@ npm run build.server
     }),
   ],
   ```
-* Add `base: '/qwik-jokes-tutorial/',` in the root `vite.config.ts`:
+* Add `base: '/qwik-jokes-tutorial/',` in the **root** `vite.config.ts`:
   ```ts
   base: '/qwik-jokes-tutorial/',
   plugins: [
@@ -82,7 +96,7 @@ npm run build.server
     tsconfigPaths()
   ],
   ```
-* Use `npm run build.server` for the build step in the `.github/workflows/main.yml` Github Action workflow:
+* Use `npm run build.full` for the build step in the `.github/workflows/main.yml` Github Action workflow:
   ```yml
   - name: Build Qwik app
     run: npm run build.full
